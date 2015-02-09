@@ -1,0 +1,41 @@
+
+a {
+	display: block;
+	border: 1px solid #000;
+	background: red;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav>li {
+	float: left;
+	position: relative;
+}
+
+li {
+	list-style:none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.nav>li ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+	opacity: 0;
+	height: 0;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.nav>li a:hover+ul {
+	height: auto;
+	display: block;
+	opacity: 1;
+}
